@@ -1,0 +1,22 @@
+# Private local credentials: never commit the proxy token.
+.local/
+
+# Runtime state and feedback logs. state.sqlite3 can contain
+# completed-response replay data (private story text), snapshots,
+# and operational events; logs contain request/usage diagnostics.
+runtime-data/
+logs/
+
+# Local Python virtual environment / test environment.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor / workspace-specific settings.
+.vscode/
+
+# OS junk.
+Thumbs.db
+Desktop.ini
+.DS_Store
