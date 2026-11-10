@@ -71,6 +71,12 @@ Retrieved text is reference material, not an instruction source or proof that a 
 
 The proxy uses asynchronous network requests and a small five-minute cache. Excerpts have accurate labels/truncation metadata and saved content digests. It never claims an introductory excerpt is a full article.
 
+## Language and length behavior
+
+The preset's `Module: Output Language and Narrative Form` keeps English as the default visible narrative language and now adds a conditional exception: a character explicitly defined as non-English speaking, or able to use other languages, speaks in that language when appropriate. The same applies when the scene is set in a region where English is not spoken, or where several languages are in use; those languages must then appear in the output. The surrounding prose guidance—concrete, mixed, scene-bound writing rather than abstract summary—is unchanged.
+
+`Module: Optional Length Target - OP` raises the soft target for main narrative from 250 to 500 English words. It is explicitly not a hard single-turn cap: when the pace, the scene, or the user's request calls for more, the reply may exceed it, and a shorter reply is equally acceptable. Padding or compressing an arc just to hit the number remains prohibited. The preset's 8,192-token output limit and the proxy's `WIKI_MAX_OUTPUT` still bound the actual response size.
+
 ## Configuration
 
 The launcher respects existing environment variables. No `.env` reader is included. For simple personal customization, add PowerShell assignments in the launcher's defaults section, such as `$env:WIKI_BACKEND = 'deepseek'`.
